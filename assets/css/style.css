@@ -1,0 +1,329 @@
+﻿@font-face {
+    font-family: 'Roboto Black';
+    src: url('/assets/fonts/Roboto/Roboto-Black.ttf');
+}
+@font-face {
+    font-family: 'Roboto Black Italic';
+    src: url('/assets/fonts/Roboto/Roboto-BlackItalic.ttf');
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('/assets/fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: 'Roboto Bold Italic';
+    src: url('/assets/fonts/Roboto/Roboto-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'Roboto Italic';
+    src: url('/assets/fonts/Roboto/Roboto-Italic.ttf');
+}
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('/assets/fonts/Roboto/Roboto-Light.ttf');
+}
+@font-face {
+    font-family: 'Roboto Light Italic';
+    src: url('/assets/fonts/Roboto/Roboto-LightItalic.ttf');
+}
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('/assets/fonts/Roboto/Roboto-Medium.ttf');
+}
+@font-face {
+    font-family: 'Roboto Medium Italic';
+    src: url('/assets/fonts/Roboto/Roboto-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto Thin';
+    src: url('/assets/fonts/Roboto/Roboto-Thin.ttf');
+}
+@font-face {
+    font-family: 'Roboto Thin Italic';
+    src: url('/assets/fonts/Roboto/Roboto-ThinItalic.ttf');
+}
+
+:root{
+    --primary-color: #E63637;
+    --secondary-color: #44944f;
+    --text-color: #000;
+    --link-hover-color: #000;
+    --main-text-color: #fff;
+}
+
+
+/* ---- common begin ---- */
+
+body {
+    color: var(--text-color);
+    font-family: 'Roboto', 'Segoe UI', 'Open Sans', sans-serif;
+}
+
+section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+a{
+    color: var(--text-color);
+}
+
+a:hover{
+    color: var(--link-hover-color);
+}
+
+p{
+    font-family: 'Roboto Light';
+    font-size: .9em;
+    line-height: 1.1em;
+}
+
+.bg-green {
+    background: var(--secondary-color);
+}
+
+.bg-red {
+    background: var(--primary-color);
+}
+
+
+.bg-black-23t{
+    background-color: black;
+    opacity: 0.23;
+}
+
+/* ---- common end ---- */
+
+
+/* ---- top menu begin ---- */
+.topmenu__container{
+    height: 56px;
+}
+
+.topmenu__row__city{
+    height: 56px;
+    color: var(--main-text-color);
+    font-family: 'Roboto Light';
+    font-size: 1.1em;
+}
+
+.topmenu__row__contacts{
+    color:  var(--main-text-color);
+    font-family: 'Roboto Light';
+    font-size: 1.1em;
+}
+
+.topmenu__row__contacts nav li a {
+    color:  var(--main-text-color);
+    font-family: 'Roboto Light';
+    font-size: 1.1em;
+}
+
+.topmenu__row__contacts nav li a:hover {
+    color: var(--link-hover-color);
+}
+
+/* ---- top menu end ---- */
+
+
+/* ---- top menu begin ---- */
+#mainmenu{
+    height: 126px;
+}
+
+.mainmenu__container{
+    height: 126px;
+}
+
+.mainmenu-logo__row{
+    height: 126px;
+}
+
+.mainmenu__col{
+
+}
+
+.mainmenu .nav-link{
+    color: var(--text-color);
+}
+
+.mainmenu .nav-link.active{
+    color: var(--primary-color);
+}
+
+.mainmenu .nav-link:hover{
+    color: var(--secondary-color);
+}
+
+
+.mainmenu li a{
+    font-weight: 400;
+}
+
+/* ---- top menu end ---- */
+
+
+
+/* ---- main page top banner begin ---- */
+
+.page-title{
+    display: block;
+    position: absolute;
+    bottom: 2em;
+    color: var(--main-text-color);
+    font-family: 'Roboto Light';
+}
+
+/* ---- main page top banner end ---- */
+
+
+
+/* ---- main page about begin ---- */
+
+.btn-widget{
+    color: var(--main-text-color);
+    background-color: var(--primary-color);
+    height: 50px;
+    box-shadow: 0px 0px 10px 0px black;
+    font-family: 'Roboto Bold';
+}
+
+.margin_mt27px{
+    margin-top: -27px;
+}
+
+/* ---- main page about end ---- */
+
+
+
+
+/* ----  coworking with us begin ---- */
+
+.main-coworking-with-us-list div img{
+    width: 40px;
+}
+
+.main-coworking-with-us-list h6{
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* ---- coworking with us end ---- */
+
+
+
+
+/* ---- main page agents begin ---- */
+
+#main-agents-block{
+    background-color: var(--secondary-color);
+}
+
+.main-agents-container__title{
+    color:var(--main-text-color);
+}
+
+
+.main-agents-list div img{
+    width: 90%;
+}
+
+.main-agents-list h6{
+    color: var(--main-text-color);
+}
+
+.main-agents-list p{
+    color: var(--main-text-color);
+    line-height: 1.1em;
+    margin: 0;
+    padding: 0;
+}
+
+.main-agents-container___link{
+    color: var(--main-text-color);
+}
+
+.main-agents-container___link:hover{
+    color: var(--primary-color);
+}
+
+/* ---- main page agents end ---- */
+
+
+/* ---- main page reviews begin ---- */
+
+
+.main-reviews-list__card{
+    padding: 15px;
+    box-shadow: 0px 0px 5px 0px lightgray;
+}
+
+.main-reviews-list__card img{
+    width: 40px;
+}
+
+.main-reviews-list__card h6{
+    color: var(--secondary-color);
+    font-size: 0.9em;
+    font-weight: 600;;
+}
+
+.main-reviews-list__card a{
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 0;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.main-reviews-list__card a:hover{
+    background-color: var(--primary-color);
+}
+
+
+
+/* ---- main page reviews end ---- */
+
+
+
+/* ---- footer begin ---- */
+
+.footer__container{
+
+}
+
+.footer__leftmenu{
+
+}
+
+.footer__leftmenu li a{
+    color: var(--main-text-color);
+}
+
+.footer__leftmenu li a:hover{
+    color: var(--link-hover-color);
+}
+
+.footer__centerblock__text, .footer__centerblock__copyright, .footer__centerblock__title{
+    color:  var(--main-text-color);
+}
+
+.footer__centerblock__text{
+    font-size: 0.6em;
+    font-family: "Roboto Light";
+}
+
+.footer__centerblock__menu li a{
+    color: var(--main-text-color);
+}
+
+.footer__centerblock__menu li a:hover{
+    color: var(--link-hover-color);
+}
+
+
+/* ---- footer end ---- */
