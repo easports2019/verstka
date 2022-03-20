@@ -1,4 +1,5 @@
-﻿@font-face {
+﻿/*#region font-faces */
+@font-face {
     font-family: 'Roboto Black';
     src: url('/assets/fonts/Roboto/Roboto-Black.ttf');
 }
@@ -47,16 +48,22 @@
     src: url('/assets/fonts/Roboto/Roboto-ThinItalic.ttf');
 }
 
+/*#endregion font-faces */
+
+/*#region variables */
 :root{
     --primary-color: #E63637;
     --secondary-color: #44944f;
     --text-color: #000;
     --link-hover-color: #000;
     --main-text-color: #fff;
+    --main-border: #dedede;
+    --button-background: #f3f3f3;
+    --secondary-text-color: #ababab;
 }
+/*#endregion*/
 
-
-/* ---- common begin ---- */
+/*#region ---- common ---- */
 
 body {
     color: var(--text-color);
@@ -70,16 +77,32 @@ section{
 
 a{
     color: var(--text-color);
+    text-decoration: none;
 }
 
 a:hover{
     color: var(--link-hover-color);
+    text-decoration: none;
 }
 
 p{
     font-family: 'Roboto Light';
     font-size: .9em;
     line-height: 1.1em;
+}
+
+
+select,
+option,
+input,
+button
+{
+    font-size: 0.8em;
+    height: 35px;
+    border-radius: 0;
+    border-style: solid;
+    border: 1px solid var(--main-border);
+    padding: 0 15px;
 }
 
 .bg-green {
@@ -96,10 +119,28 @@ p{
     opacity: 0.23;
 }
 
-/* ---- common end ---- */
+.title{
+    color: var(--text-color);
+}
 
+.small-table{
+ font-size: 0.9em;
+ font-family: 'Roboto Light';
+}
 
-/* ---- top menu begin ---- */
+.small-table td{
+ margin: 0;
+ padding: 0;
+ border: 0;
+}
+
+.text-secondary{
+    color: var(--secondary-text-color);
+}
+
+/*#endregion ---- common ---- */
+
+/*#region ---- top menu ---- */
 .topmenu__container{
     height: 56px;
 }
@@ -127,10 +168,9 @@ p{
     color: var(--link-hover-color);
 }
 
-/* ---- top menu end ---- */
+/*#endregion ---- top menu ---- */
 
-
-/* ---- top menu begin ---- */
+/*#region ---- top menu ---- */
 #mainmenu{
     height: 126px;
 }
@@ -164,11 +204,11 @@ p{
     font-weight: 400;
 }
 
-/* ---- top menu end ---- */
+/*#endregion ---- top menu ---- */
 
 
-
-/* ---- main page top banner begin ---- */
+/* ---- MAIN PAGE begin ---- */
+/*#region ---- main page top banner ---- */
 
 .page-title{
     display: block;
@@ -178,11 +218,9 @@ p{
     font-family: 'Roboto Light';
 }
 
-/* ---- main page top banner end ---- */
+/*#endregion ---- main page top banner ---- */
 
-
-
-/* ---- main page about begin ---- */
+/*#region ---- main page about ---- */
 
 .btn-widget{
     color: var(--main-text-color);
@@ -196,12 +234,9 @@ p{
     margin-top: -27px;
 }
 
-/* ---- main page about end ---- */
+/*#endregion ---- main page about ---- */
 
-
-
-
-/* ----  coworking with us begin ---- */
+/*#region ----  coworking with us ---- */
 
 .main-coworking-with-us-list div img{
     width: 40px;
@@ -212,12 +247,9 @@ p{
     color: var(--text-color);
 }
 
-/* ---- coworking with us end ---- */
+/*#endregion ---- coworking with us ---- */
 
-
-
-
-/* ---- main page agents begin ---- */
+/*#region ---- main page agents ---- */
 
 #main-agents-block{
     background-color: var(--secondary-color);
@@ -251,11 +283,9 @@ p{
     color: var(--primary-color);
 }
 
-/* ---- main page agents end ---- */
+/*#endregion ---- main page agents ---- */
 
-
-/* ---- main page reviews begin ---- */
-
+/*#region ---- main page reviews ---- */
 
 .main-reviews-list__card{
     padding: 15px;
@@ -286,11 +316,250 @@ p{
 
 
 
-/* ---- main page reviews end ---- */
+/*#endregion ---- main page reviews ---- */
+/* ---- MAIN PAGE end ---- */
 
 
 
-/* ---- footer begin ---- */
+/* ---- CATALOGUE PAGE begin ---- */
+/*#region ---- catalogue breadcrumbs ---- */
+
+
+.beadcrumbs__list span, .beadcrumbs__list a{
+    color: var(--secondary-text-color);
+    font-size: 0.9em;
+    font-family: 'Roboto Light';
+}
+    .beadcrumbs__list a:hover{
+        color: var(--primary-color);
+    }
+
+/*#endregion ---- catalogue breadcrumbs ---- */
+
+/*#region ---- catalogue filters ---- */
+
+
+.filters__service-list span{
+    margin-right: 15px;
+    padding: 0 0 3px 0;
+    
+}
+
+.filters__service-list span, .filters__service-list a{
+    color: var(--text-color);
+    font-family: 'Roboto';
+}
+
+
+.filters__service-list span:hover{
+    color: var(--text-color);
+    border-bottom: 4px solid var(--primary-color);
+    font-family: 'Roboto';
+}
+
+.filters__service-list span.active{
+    color: var(--text-color);
+    border-bottom: 4px solid var(--primary-color);
+    font-family: 'Roboto';
+}
+    .filters__service-list a:hover{
+        color: var(--primary-color);
+    }
+
+.filters__field-list{
+    margin: 15px 0;
+}
+
+.filters__field-list .col, 
+.filters__field-list .col-1, 
+.filters__field-list .col-2{
+    margin: 0;
+    padding: 0;
+}
+
+.filters__field-list select,
+.filters__field-list option,
+.filters__field-list input,
+.filters__field-list button,
+.filters__field-list span,
+.filters__field-list a{
+    background-color: transparent;
+    width:100%;
+}
+
+.filters__field-list span,
+.filters__field-list a{
+    font-size: 0.8em;
+    height: 35px;
+    width:100%;
+    border-radius: 0;
+    border-style: solid;
+    border: 1px solid var(--secondary-text-color);
+    padding: 0 10px;
+    border: none;
+    white-space: nowrap
+}
+
+.filters__field-list button
+{
+    background-color: var(--secondary-color);
+    color:var(--main-text-color);
+    font-family: 'Roboto Medium';
+}
+
+
+.filters__field-list select:focus-visible,
+.filters__field-list option:focus-visible,
+.filters__field-list input:focus-visible,
+.filters__field-list button:focus-visible,
+.filters__field-list span:focus-visible,
+.filters__field-list a:focus-visible{
+    outline: none;
+
+}
+
+/*#endregion ---- catalogue filters ---- */
+
+/*#region ---- card ---- */
+
+.card_realty{
+    border: 0;
+}
+
+.card_realty .card-body{
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.card_realty .card-body div, .card_realty .card-body p{
+    padding-top: 0.5rem;
+}
+
+.card_realty .card-body .row div:first-child{
+    text-align: left;
+}
+
+.card_realty .card-body .row div:last-child{
+    text-align: right;
+}
+
+.card_realty .card-text{
+    color: var(--secondary-text-color);
+}
+
+/*#endregion ---- card ---- */
+
+/*#region ---- product list controls ---- */
+
+.product-list-controls__block select,
+.product-list-controls__block button{
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+/*#endregion ---- product list controls ---- */
+
+/*#region ---- product list items ---- */
+
+
+.product-list-item{
+    margin-bottom: 4em;
+}
+
+.product-list-item button{
+    background-color: var(--button-background);
+    border: 0;
+    color: var(--secondary-color);
+}
+
+.product-list-item img{
+    width: 100%;
+}
+
+.product-list-item__under-img{
+    background-color: var(--secondary-color);
+    width: 100%;
+    margin:auto 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.product-list-item__under-img a{
+    color: var(--main-text-color)
+}
+
+
+.product-list-item__price{
+    color: var(--secondary-color);
+}
+
+.product-list-item__price-area{
+    color: var(--secondary-text-color);
+}
+
+
+/*#endregion ---- product list items ---- */
+
+/*#region ---- product list controls ---- */
+
+.product-pagination{
+    background-color: transparent;
+}
+
+.product-pagination li{
+    color: var(--text-color);
+    border: 0;
+}
+
+.product-pagination li .active{
+    background-color: var(--secondary-color);
+    color: var(--main-text-color);
+}
+
+.product-pagination li a{
+    position: relative;
+    display: block;
+    padding: .6rem .9rem;
+    margin: 0 .5em;
+    line-height: 1.25;
+    color:var(--text-color);
+    background-color: #fff;
+    border: 0;
+}
+
+.product-pagination li.active a{
+    background-color: var(--secondary-color);
+    color: var(--main-text-color);
+}
+
+.product-pagination li a:hover{
+    background-color: var(--primary-color);
+    color: var(--main-text-color);
+}
+
+
+/*#endregion ---- product list controls ---- */
+
+
+
+/* ---- CATALOGUE PAGE end ---- */
+
+
+/*#region ---- footer ---- */
+
+
+.bottommenu__row__city{
+    height: 56px;
+    color: var(--text-color);
+    font-family: 'Roboto Light';
+    font-size: 1.1em;
+}
+
+.bottommenu__row__contacts{
+    color:  var(--text-color);
+    font-family: 'Roboto Light';
+    font-size: 1.1em;
+}
 
 .footer__container{
 
@@ -326,4 +595,4 @@ p{
 }
 
 
-/* ---- footer end ---- */
+/*#endregion ---- footer ---- */
