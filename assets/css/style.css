@@ -576,7 +576,10 @@ button
 
 .agents-list-item .details{
     position: absolute;
-    bottom: calc(-1 * (50%+40px));
+    /* bottom: calc(-1 * 40px); */
+    width: 100%;
+    bottom: -100px;
+    height: 7rem;
     display: none;
     z-index: 1;
 }
@@ -603,11 +606,15 @@ button
     margin: 7px 0;
     font-size: .9em;
     font-family: 'Roboto Thin';
+    white-space: nowrap;
+   overflow: hidden;
 }
 .agents-list-item__details_email, .agents-list-item__details_action{
     font-size: .7em;
     margin: 7px 0;
    font-family: 'Roboto Thin';
+   white-space: nowrap;
+   overflow: hidden;
 
     /* padding:0; */
 
