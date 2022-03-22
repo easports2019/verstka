@@ -539,8 +539,83 @@ button
 
 
 /*#endregion ---- product list controls ---- */
+/* ---- CATALOGUE PAGE end ---- */
 
 
+/* ---- CATALOGUE PAGE begin ---- */
+/*#region ---- agents list  ---- */
+
+.agents-list-item{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    color: var(--main-text-color);
+    box-shadow: 0px 5px 5px 0px var(--main-border);
+    position: relative;
+}
+
+.agents-list-item div{
+    flex-basis: 100%;
+    padding: 5px 15px 10px;
+    background-color: var(--secondary-color);
+   cursor: pointer;
+
+}
+
+.agents-list-item .button{
+   text-align: center;
+   padding: 0;
+   font-family: 'Roboto Medium';
+}
+
+.agents-list-item .button span{
+   line-height: 40px;
+    font-size: .8em;
+}
+
+.agents-list-item .details{
+    position: absolute;
+    bottom: calc(-1 * (50%+40px));
+    display: none;
+    z-index: 1;
+}
+
+.agents-list-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.agents-list-item_name {
+    z-index: 0;
+    color: var(--text-color);
+    text-align: left;
+    font-family: 'Roboto Medium';
+    margin-top: 0.7em;
+    font-size: 1.1em;
+}
+
+.agents-list-item__details_name{
+    margin: 0px 0;
+    font-family: 'Roboto';
+}
+.agents-list-item__details_tel{
+    margin: 7px 0;
+    font-size: .9em;
+    font-family: 'Roboto Thin';
+}
+.agents-list-item__details_email, .agents-list-item__details_action{
+    font-size: .7em;
+    margin: 7px 0;
+   font-family: 'Roboto Thin';
+
+    /* padding:0; */
+
+}
+
+
+
+/*#endregion ----  agents list ---- */
 
 /* ---- CATALOGUE PAGE end ---- */
 
