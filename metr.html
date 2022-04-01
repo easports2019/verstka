@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>@page.Title - @master.SiteName</title>
+    <meta name="description" content="@page.Description" />
+    <meta name="keywords" content="@page.Keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+
+    <style>
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 700px) {
+
+  .container-1 {
+    display: flex;
+    /* align-items: unset; */
+    flex-direction: row;
+  }
+    
+}
+  
+.container-2{
+  display: flex;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+}
+
+.container-1 div, .container-2 div{
+  padding: 10px;
+  border: 1px solid silver;
+}
+/*#region 1 */
+.box-1{
+  flex: 3;
+  order: 2;
+}
+
+.box-2{
+  flex: 3;
+  order: 3;
+}
+
+.box-3{
+  flex: 1;
+  order: 1;
+}
+/*#endregion 1 */
+
+
+.box-4{
+  flex: 1;
+  /* order: 2; */
+
+}
+
+.box-5{
+  flex: 1;
+}
+
+.box-6{
+  flex: 1;
+  order: 2;
+  flex-basis: 50%;
+
+}
+
+.box-7, .box-8, .box-9{
+  flex-basis: 90%;
+}
+
+.box{
+  /* flex-basis: 50%; */
+}
+
+    </style>
+</head>
+<body>
+    @extends('layouts.master')
+    @section('content')
+    <div id="overlay">
+      <img src="{{asset('images/load_2.gif')}}" alt="Loading" />
+    </div>
+    <header class="on-header header-z-index">
+          <div class="on-flex on-vh-center on-wrapper">
+            <div class="on-cal-6 on-logo-wrapper on-align-left">
+              <a href="/">
+                <img alt="Metr" src="{{asset('images/metr_logo.png')}}" title="Metr" />
+              </a>
+            </div>
+            <div class="on-cal-18 on-menu-wrapper on-align-right">
+              <div class="on-contact-link">
+                Contact
+                <div class="on-contact-menu-wrapper on-transition">
+                  <ul>
+                    <li>
+                      Derbenevskaya st.,1
+                    </li>
+                    <li>
+                      <a href="tel:+79261622291">
+                        +7 926 162 22 91
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:info@metr.studio">
+                        info@metr.studio
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      </header>
+      <main>
+        <section class="on-video-section on-full-fixed">
+          <div class="on-metr-png-wrapper">
+            <video autoplay loop muted>
+              <source src="{{asset('videos/metr.mp4')}}" type="video/mp4">
+                <source src="{{asset('videos/metr-1.webm')}}" type="video/webm">
+              <source src="{{asset('videos/metr.ogg')}}" type="video/ogg">
+            </video>
+            <div class="on-me-overlayn on-transition"></div>
+            <img class="on-metr-png on-me-png on-transition" src="{{asset('images/me.png')}}" alt="Metr" />
+            <div class="on-tr-overlayn on-transition"></div>
+            <img class="on-metr-png on-tr-png on-transition" src="{{asset('images/tr.png')}}" alt="Metr" />
+            <h1 class="on-hidden">METR</h1>
+            <span class="on-video-sound-button on-hide">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="29" viewBox="0 0 40 37">
+                <g>
+                  <g>
+                    <image width="32" height="29"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAlCAYAAAAwYKuzAAAE6UlEQVRYR8WYaahVVRTHf//mebYCK9My1Ca0wSKIsggLNZvDoiyKqCyNJJGw0U8NYHM0gA0WGSnVl2ygQZqkgQYboCKbi0aak1zxP6zz2F3uve8+n++99emcs8/Z+7fXWnsNRwygRMT6wEpJq1phaKD4IuJW4Fzge2CcpHeasQwk4MPA8Qn1FTBW0heNkGsEMCLWamemZpqJiGHAi8D2Of46cJCkv8v3ewWYPnQFMA3YVdK3PXGZiNgXeAHYML+bJ+miNQIYEbsAC4ExOeFQSZ+20NZWwDzgL2CGpD/q9yJiCrAg7yO1+HI9vloajAj7zt3AZgVQO8ALgRvy3cXACZL+LSANaFDLm8A+kgxLjwAjYgPgOuD8JppqB2gtLwPWzu/mSppTAFrDHwFb5rOTJNk6nQNGxHDAJ2/vFn7WEtDvR8RZwJ2FKcdLerKALLW8XNIeHQNGxMk5+SZtDsH/ACNiB7uApPcKiNuBc/J+BTBS0p+5AQftz4Btc/xgSUvbmjhNaueuJ213SLsAI2I34C3ALnGBpJsTYiNgObBzTnSJpGuLDVwOOCpYFkg6tSVgRIwAHgL2akfV7JBExDjgmRxzGjtK0pKE9AGzq1i+BoZIWpljjgz2RcvPwCBFxIwmAIMzDW3cIZxfKzXojS8CJuf3nwOjJP0WER77ALCWLZMkPV5o8Q1gdN4fYsDqOK8BafTBTdPMQ3PuOZLmpqYuzmjg23slnV4A2uQz8352nwEmyASg1s43wGCnxIgYAtRBfYWk2id92o9J7XuKhX0KmJA+FKNSI861L+XzT+wW+XxrST/mc/v++/n83f4AvBK4LBecKen6BLGPWluWEnw9oC4YfugPwEnAowlyl6SzE/CmLDJ8e6Kk+mTbzL/UabQ/APcHXk3ARZKOS0DHO8c9yxmS5hcHxXWhIwn9AXg48FQuvljSsQnoE31pPp8u6cYC0AfIB6lfAMscfJuk8xKwTHtTJd1TADpIbw6s6g8NeuHTcvFpkm5JQGcaZxzLkZKeyOdOj1V+Br7rU8CIcO51v2FtWEZI+tAtQjZLdXlVZqE9gbfz/Vf6GtA131W52DJJY1NLBwB11fylJFc+lUTEKcD9eTu/zwAjwkWqIRzXLJMlVeEmIlzd1EVvV+jJsTuAKhS5HjBgV5qpdwFsB7hvrfuNYqjlZWkmV8g2UxUqgCWSxifAFoCzSG3eQyU9l2MuJFwn7pjfjWxXbnnn1wDTO6FrqGYmAo/ld/ZB9xjOxdZeGf9cM46u+4+IOBCoUqHLLknDu+1JIsKZwEG03nEr3lKDrmTcU2wDnFn/Ncga0+VU3WY2ZhCvU1c2Vd/SLWDueifgAefMNtrsricx1PPAfjnHs5LqMGPNeg0Xq+ta0cAwt7EdASbkOsDVwKwWzVa7rs7rONdWaQ74NU37cb3hiCgD9yOSqt8iHQMWEx2RYWBQgzbbAbrperB4v9G0rqBfAxwfLWMkuT/uOWBq0/9T3Gx3mag8JI1u0PD3YJYkH75KsjHzf5m6ZrxPUp15Vg8wJ3YTPhtwveedd2di9ye/l71wzlPGxJ+A3SW5maqkxyZuoh07/dT851J1Z51KRJTNuj+bIql0hd4DdgrTZGNHZ+9R+11XpVO+22sN9gLwaeCw/N714gRJ/zTON5CAzrcuvZYCE8tfciXkf3jwShOmTaXHAAAAAElFTkSuQmCC" />
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <span class="on-video-off-sound-button on-hide">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 139.99 126.87" style="enable-background:new 0 0 139.99 126.87;" xml:space="preserve">
+                <style type="text/css">
+                  .st0 {
+                    fill: #FFFFFF;
+                  }
+                </style>
+                <g>
+                  <path class="st0"
+                    d="M0,41.56c5.74,0.03,11.47,0.01,17.21,0.11c1.63,0.03,2.91-0.39,4.24-1.38c11.75-8.84,23.55-17.63,35.37-26.38   c1.26-0.93,2.72-1.65,4.18-2.21c1.33-0.51,2.08,0.12,2.22,1.53c0.05,0.54,0.05,1.09,0.05,1.64c0,32.12,0,64.23,0,96.35   c0,0.32,0.01,0.64,0,0.96c-0.09,2.87-1.23,3.58-3.85,2.29c-0.93-0.46-1.81-1.05-2.65-1.67c-12.04-8.91-24.07-17.85-36.13-26.74   c-0.64-0.47-1.55-0.79-2.34-0.8C12.2,85.23,6.1,85.29,0,85.31C0,70.73,0,56.15,0,41.56z" />
+                </g>
+              </svg>
+            </span>
+          </div>
+          <audio class="on-video-sound-opening" src="{{asset('audio/reel_opening_sound.wav')}}" controls="">
+            Sorry, your browser doesn't support HTML5 audio. And that is a good thing, since these files are 10 times as big as mp3 files.
+          </audio>
+          <audio class="on-video-sound-closing" src="{{asset('audio/reel_closing_sound.wav')}}" controls="">
+            Sorry, your browser doesn't support HTML5 audio. And that is a good thing, since these files are 10 times as big as mp3 files.
+          </audio>
+        </section>
+        <section class="on-home-content">
+        <div class="on-video-gallery on-slider">
+            <div class="on-marquee on-marquee-1">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+    
+            <div class="on-marquee on-marquee-2">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+    
+            <div class="on-marquee on-marquee-3">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+    
+            <div class="on-marquee on-marquee-4">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+            @if(count($projects) > 9)
+            <span class="on-arrows on-arrow-left">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="89" viewBox="0 0 23 89" transform='rotate(180)'><g><g opacity=".5"><image width="23" height="89" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAABZCAYAAADVeL+8AAAC00lEQVRoQ63ZP49MURjH8d8PDQmVQkMUbOI1sBUKrwEVEpQKjVVZEoWohAQV3oMEFd6Cwp9EViORKAjb4JFncmZy5+495zzPc85pdicz5zN3z3z35s65RBoisgPAzvRwk+Sf+XPRn9SJInILwFUA2xP0F8BtAGskJYyLyEUA9zPAJZIPWvD3AA5ngC8ADpL8F3kDikjtzz5J8mUU/wZgb2HyM5JnovgjAOcKkzcB7CP5w/sGuizHALyuTLxAUg/CNRTXHPVDPVSY+ZakHoRrzDtfA3CjMnOF5AePPscPAPgMYPY4M26S1IMwjwUmIprb8cJMd/NDXHN7UjksV/NDfBeArwB292p+aY1FpGvzY7xr82O8a/Nb0hORbs1P4d2an/yn6dV8Du/SfA7v0nz2XNKj+RLe3HwJb26+dIrV65mm5mt4U/NFXM+OLc1b8HDzFjzcfBVPSxM6z1vxUPNWPNS8CU9L427eg7ubN+OR5r24q3kv7mrehXubj+Dm5iO4uXk37mrefLE9eKGI2JqP4MbmP4WWJeGXAdwrHVwL/hTA6QL+PYSLyJ70RWG+yzH1Ho+j+HkADyuf12oUfwPgaAH/CGDFjYuI7nDol+LSuE5yPYKvA7hWkHUXRLdRNly4iGxLX4b3F/BXJE/o815cJ72oLMlZkpqpG6+1/TNtn/x24ea2Sc10NszLIiK2tknN1I3b2h5sFZqO3NP28MO24ua2Xbi3bS/uatuLu9o245G2Pbi7bQ/ubtuER9u24qG2q3hL2xY83LYFD7ddxFvbruFNbdfwprazeI+2S3hz25N4r7ZzeJe2c3iXtrfgPduewru1PYV3a3sJ7932GO/a9hjXu1alW2eL6+3hRMvvlvuhi+ttCzg+8tL90KXr7Qh+B8CVzMS7JHPPVd9Ll0V3f54DWB29Wu+RniL5q6pkXjC7yk0nrSMAdDdCxwaAdy235RX5D7sl1ZtUkQNgAAAAAElFTkSuQmCC"/></g></g></svg>
+            </span>
+            <span class="on-arrows on-arrow-right">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="89" viewBox="0 0 23 89"><g><g opacity=".5"><image width="23" height="89" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAABZCAYAAADVeL+8AAAC00lEQVRoQ63ZP49MURjH8d8PDQmVQkMUbOI1sBUKrwEVEpQKjVVZEoWohAQV3oMEFd6Cwp9EViORKAjb4JFncmZy5+495zzPc85pdicz5zN3z3z35s65RBoisgPAzvRwk+Sf+XPRn9SJInILwFUA2xP0F8BtAGskJYyLyEUA9zPAJZIPWvD3AA5ngC8ADpL8F3kDikjtzz5J8mUU/wZgb2HyM5JnovgjAOcKkzcB7CP5w/sGuizHALyuTLxAUg/CNRTXHPVDPVSY+ZakHoRrzDtfA3CjMnOF5AePPscPAPgMYPY4M26S1IMwjwUmIprb8cJMd/NDXHN7UjksV/NDfBeArwB292p+aY1FpGvzY7xr82O8a/Nb0hORbs1P4d2an/yn6dV8Du/SfA7v0nz2XNKj+RLe3HwJb26+dIrV65mm5mt4U/NFXM+OLc1b8HDzFjzcfBVPSxM6z1vxUPNWPNS8CU9L427eg7ubN+OR5r24q3kv7mrehXubj+Dm5iO4uXk37mrefLE9eKGI2JqP4MbmP4WWJeGXAdwrHVwL/hTA6QL+PYSLyJ70RWG+yzH1Ho+j+HkADyuf12oUfwPgaAH/CGDFjYuI7nDol+LSuE5yPYKvA7hWkHUXRLdRNly4iGxLX4b3F/BXJE/o815cJ72oLMlZkpqpG6+1/TNtn/x24ea2Sc10NszLIiK2tknN1I3b2h5sFZqO3NP28MO24ua2Xbi3bS/uatuLu9o245G2Pbi7bQ/ubtuER9u24qG2q3hL2xY83LYFD7ddxFvbruFNbdfwprazeI+2S3hz25N4r7ZzeJe2c3iXtrfgPduewru1PYV3a3sJ7932GO/a9hjXu1alW2eL6+3hRMvvlvuhi+ttCzg+8tL90KXr7Qh+B8CVzMS7JHPPVd9Ll0V3f54DWB29Wu+RniL5q6pkXjC7yk0nrSMAdDdCxwaAdy235RX5D7sl1ZtUkQNgAAAAAElFTkSuQmCC"/></g></g></svg>
+            </span>
+            @endif
+            <div class="on-container">
+              <div class="on-heading-wrapper on-align-center">
+                <h2 class="on-heading">
+                  some of Our projects
+                </h2>
+              </div>
+              <div id="onvideoslider" class="on-wrapper on-gallery-video-wrapper">
+                <div class="on-hidden-overflow">
+                  <div class="on-slider-wrapper"> 
+                    @php $count = 1; @endphp
+                      @foreach($projects as $key=>$project)
+                      @if ($count%9 == 1)
+                        <div class="on-flex on-slider-item"> 
+                      @endif
+                                <div class="on-video-item" data-index="{{$key}}">
+                                <video preload="none" controls loop muted>
+                                  <source src="{{asset('uploads/projects/videos/'.$project->video)}}" type="video/mp4">
+                                  <source src="{{asset('uploads/projects/videos/'.$project->video)}}" type="video/ogg">
+                                </video>
+                                <span class="on-close">
+                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="49" viewBox="0 0 48 49"><g><g opacity=".7"><image width="48" height="49" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAxCAYAAACcXioiAAAFjUlEQVRoQ82abWwURRjH/zN7SilXamsMifEDMTRIy1tud8sFJNAPvMQYg35AY0J8CQkmKCpICGoBqUH5YIJGE4IKmGDwgwRRQYHoGdLo9W72LiQ9YtRiCDWkqY3QNRTo7YyZ4xavx/Vudm9but8u+7z8f9uZZ2aeKUFAD2OslhByP+e8kVLaAOBuzvkkGZ5Seo1zfo1S+g+ldCAcDl9qamq6HkRqUk0QxtgcIcQaQsgjAFo8xHIAMCHEN5qmHYpEIhc8+I4w9QwghKCpVGoV53wrIcTwm7jATwghTgLYbZrmT17jeQJIJBJLKKUfApjtNZGKvRDiB03TNkQikXMq9tJGCSCTyYSvXr36ASHkOdXAVdhlAew6f/78ztWrV8uhVvapCJBMJmcTQr4EMLNSsCDfCyHOEEKeMgzjUrm4ZQHyQ+ZrAFODFOch1gXHcZYvWLDgt9F8RgVgjC0HIMXnSuEdfP6mlC4ZbV6UBEgkEialNAZgyh0UXpj6r2w2G41Go73Fem4DiMfj00Kh0FkA0yaIeFdGqr6+fmHxAjgCQNZ4y7K+B7BsgonPyRFCfGSa5ouF2kYAJJPJdYSQvRNRvKspPx/OuL9vAXR1dd2radrvAOQ+ZiI/Gdu257e1tcn14v+FjDH2LoAtqsoHBwcRDoflRk3VpaTd9es393STJqkXO7mg6rp+8BZAOp2+x3EcOcOVqs7AwAB2btuOGU1NWL/hJd8QUvzuXe/kALa8vtULxK+6rrcQQnhuCDHGXgawR/VTnj55Cp/s25czf3jxYl8QrvhMdzc0TUP7ju2Y1dysKkHarTAM45QLYAGIePH+6uhRHD70uS+IYvEbN78GwzS9pJcV6ZBpmmtIOp2e7jjOn56888Z+IIIQn0//r23bDYQxthbAx34ApI8XiADF5+TK84gEkLP5Gb8AqhBBi8/rXS8BGAC9GoBKEGMkXs6DPRLgSlDb5VLDaXh4OFcq3WrjZ8KW+bjHJICo9usX+hdCLFy0CFeuXEamO5MrlQGLl3+BXwIHKB5O8vdYiM9/tLNjAiDH/OZXN6Kvry+Xp7m5Ge1v7fC9YpcZIecCByicsHKfxDn3tdgpDmsrUIBS1aa3t9f3il0JInfwZ4xdBPBAJeNK78uVSi+LXaU8Re8PS4AfAbR5dBxhrlLnxwiiQwK8B2CjXwAV8W7soCGEEE8Ty7IelU1WPwBexI8FBKV0OonH41NDoVC/bId7gfAjPmCIHsMwZuTOA8lk8ggh5AlVgGrEBwjxtmEY7S7AY4SQY6oA3x0/gYP791e9whbOiTe2tWPuvHmqEuA4zkzZcswB5PtB3QBmqUQQQuDg/gOYM3eO55NUcXwJMaV2CpatkJ1M5eeYYRirpPWttoplWc8KIQ4oh7iDhpzz1tbW1uQIgPzNS1wI4e1wOs4g7lnYTTuiM5dKpQzOeZe8lxtnXarpLmez2Yei0ejNXWKpGxrG2JsAOlQjjqedrJS6rh8tzHlbd1oOJcbYcULIyvEUp5DrfcMwXim2K3k/0NnZWVdTUyPvB6o+KysIq2hCCDnS09PzZKk7s1FvaFKp1H2c89MA1ItzRSm+DE5Mnjz58ZaWlhulvMvekTHG6mXrB8BSX6mrd/rMtu21bifaM4B0YIzdBUB2YDdVr0c5wg0hxCbTNOWddNmn4jWr621Z1kp5QwLgwUpBq3yfEEK8YJpmWiWOMoAMFovFaurq6jYDkNWgUSWBB5uLhJCOSCTyqWybq/p5AnCDypv7oaGhdQCel00H1WSl7GRvB8De2traL0abqOXi+wIoDJhIJOZTSuWhaCkhpBVAXQWgASHEz5RSeZT9Vtf1P6r5AFUDFCePxWIhAKHGxkbNtm3a0NAghoaGuG3bvL+/f1jl/x+8AP0H4NTAFrleufgAAAAASUVORK5CYII="/></g></g></svg>
+                                </span>
+                                </div>
+                                <div class="on-cal-8 on-item" data-index="{{$key}}">
+                                  <div class="on-box" style="background-image:url({{asset('uploads/projects/images/'.$project->image)}});">
+                                    <span>{{$project->name}}</span>
+                                  </div>
+                                </div>
+                        @if ($count%9 == 0)
+                        </div> 
+                      @endif
+                      @php $count++; @endphp
+                   @endforeach
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="on-marquee-wrapper on-video-gallery">
+        <div class="on-marquee on-marquee-1">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+    
+        <div class="on-marquee on-marquee-2">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+    
+        <div class="on-marquee on-marquee-3">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+    
+        <div class="on-marquee on-marquee-4">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+    
+        <div class="on-marquee on-marquee-5">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+        <div class="on-marquee on-marquee-6">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+        <div class="on-marquee on-marquee-7">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+        <div class="on-marquee on-marquee-8">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+        <div class="on-marquee on-marquee-9">
+          <p><b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX <b>Motion Graphics</b> Character Animation Flat Animation <b>Compositing</b> Rotoscoping Clean up Multi pass compositing Keying <b>3d Animation</b> Texturing Shading 3D, 2D tracking Modeling VFX </p>
+        </div>
+        </div>
+    
+          <div class="on-logos">
+              <div class="on-container">
+                  <div class="on-heading-wrapper on-align-center">
+                      <h2 class="on-heading">
+                          our clients
+                      </h2>
+                  </div>
+                  <div class="on-flex on-vh-center on-wrapper">
+                      @for( $i = 1; $i <= 16; $i++)
+                      <div class="on-cal-6 on-item on-align-center">
+                          <div class="on-box">
+                              <a href="javascript:">
+                                  <img class="on-partner-logo" src="{{asset('images/icons/logo ('.$i.').svg')}}"/>
+                              </a>
+                          </div>
+                      </div>
+                       @endfor
+                  </div>
+              </div>
+          </div>
+    
+        </section>
+    
+        <span class="on-home-button on-split-animation on-22s on-infinity">
+          <svg class="on-round-animation on-22s on-infinity" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 254.52 254.52">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #ec2127;
+                }
+    
+                .cls-2 {
+                  fill: none;
+                  stroke: #844f9e;
+                  stroke-miterlimit: 10;
+                  stroke-width: 4px;
+                }
+    
+                .cls-3 {
+                  font-size: 33.79px;
+                  fill: #fff;
+                  font-family: RobotoSlab-Medium, Roboto Slab;
+                  font-weight: 500;
+                }
+              </style>
+            </defs>
+            <circle class="cls-1 on-color-animation on-3s on-infinity" cx="127.26" cy="127.26" r="127.26" />
+            <path class="cls-2" d="M40.43,114.06a89.64,89.64,0,0,0-1,13.2,87.81,87.81,0,1,0,174.64-13.2" /><text class="cls-3" transform="translate(213.21 98.62) rotate(-115.33)">P</text><text class="cls-3"
+              transform="matrix(-0.66, -0.75, 0.75, -0.66, 201.07, 74.95)">L</text><text class="cls-3" transform="translate(183.38 55.89) rotate(-149.71)">A</text><text class="cls-3" transform="translate(159.27 42.31) rotate(-167.18)">Y</text><text
+              class="cls-3" transform="translate(130.16 37.29) rotate(179.07)"> </text><text class="cls-3" transform="translate(117.14 37.16) rotate(166.33)">R</text><text class="cls-3" transform="translate(89.35 44.99) rotate(148.37)">E</text><text
+              class="cls-3" transform="matrix(-0.66, 0.75, -0.75, -0.66, 66.91, 59.74)">E</text><text class="cls-3" transform="translate(49.93 80.29) rotate(115.01)">L</text>
+          </svg>
+        </span>
+      </main>
+    
+      <div class="on-video-popup">
+        <span class="on-home-popup-close">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="79" viewBox="0 0 78 79"><g><g opacity=".7"><image width="78" height="79" xlink:href="data:image/png;base64,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"/></g></g></svg>
+        </span>
+        <img class="on-tv-gif on-hide" loading="lazy" src="{{asset('images/pult_2.gif')}}"/>
+        <img class="on-white-noise-gif on-hide" loading="lazy" src="{{asset('images/white_noise_opening.gif')}}"/>
+        <img class="on-closing-gif on-hide" src="{{asset('images/reel_closing_all_layers_.gif')}}"/>
+        <video preload="none" class="on-video-source on-hide" loop controls>
+          <source src="{{asset('videos/REEL_2020.mp4')}}" type="video/mp4">
+          <source src="{{asset('videos/REEL_2020.ogg')}}" type="video/ogg">
+        </video>
+      </div>
+    @endsection
+
+    <script>
+        window.onscroll = function(){
+            if(document.documentElement.getBoundingClientRect().bottom < (window.innerHeight * 2)){
+                document.getElementById("arrow-down").style.display = 'none';
+            }
+            else
+            {
+                document.getElementById("arrow-down").style.display = 'block';
+            }
+        }
+
+        var lazyVideos = [...document.querySelectorAll("video.lazy")];
+console.log(lazyVideos);
+  if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+
+          
+          video.target.load();
+          video.target.classList.remove("lazy");
+          lazyVideoObserver.unobserve(video.target);
+        }
+      });
+    });
+
+    lazyVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+    </script>
+</body>
+</html>

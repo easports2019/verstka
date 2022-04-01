@@ -104,6 +104,56 @@ button
     border: 1px solid var(--main-border);
     padding: 0 15px;
 }
+/* 
+.select-container:before {
+    content: 'Квартира';
+    font-size: 0.8em;
+    top: 8px;
+    left: 16px;
+    position: absolute;
+    pointer-events: none;
+} */
+
+.select-container:after {
+    content: '▸';
+    color: var(--primary-color);
+    height: 9px;
+    width: 12px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 7px;
+    top: 15px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.select-container span{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 0.8em;
+    pointer-events: none;
+}
+
+.select-container span+select{
+    text-align: right;
+    text-align: -webkit-right;
+    direction: rtl;
+    padding-right: 40px;
+    
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
 
 .bg-green {
     background: var(--secondary-color);
@@ -117,6 +167,26 @@ button
 .bg-black-23t{
     background-color: black;
     opacity: 0.23;
+}
+
+.w-200px{
+    width: 200px;
+    display: block;
+    position: relative;
+}
+
+.w-200px *{
+    width: 100%;
+}
+
+.w-150px{
+    width: 150px;
+    display: block;
+    position: relative;
+}
+
+.w-150px *{
+    width: 100%;
 }
 
 .title{
@@ -408,6 +478,7 @@ button
 }
 
 
+
 .filters__field-list select:focus-visible,
 .filters__field-list option:focus-visible,
 .filters__field-list input:focus-visible,
@@ -540,6 +611,37 @@ button
 
 /*#endregion ---- product list controls ---- */
 /* ---- CATALOGUE PAGE end ---- */
+
+
+
+/* ---- CARD PAGE begin ---- */
+/*#region ---- card ---- */
+
+.product-card{
+
+}
+
+.product-card__title{
+
+}
+
+.product-card__under-title{
+    color: var(--secondary-text-color);
+    font-family: 'Roboto';
+}
+
+.product-list-item__agent{
+    max-width: 100px;
+
+}
+
+
+/*#endregion ---- card ---- */
+
+
+
+/* ---- CARD PAGE end ---- */
+
 
 
 /* ---- CATALOGUE PAGE begin ---- */

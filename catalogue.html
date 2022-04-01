@@ -114,25 +114,28 @@
         <form method="post" onsubmit="">
             
             <div class="row filters__field-list">
-                <div class="col-2">
+                <div class="col select-container">
                     <select id="my-select" name="">
                         <option>Квартира</option>
                     </select>
                 </div>
-                <div class="col-1">
-                    <input type="text" placeholder="Цена от">
-                </div>
-                <div class="col-1">
-                    <input type="text" placeholder="до">
-                </div>
-                <div class="col-2">
+                <div class="col select-container">
+                    <span>Комнат: </span>
                     <select id="my-select" name="">
-                        <option>Где</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
                     </select>
                 </div>
-                <div class="col-2">
+                <div class="col">
+                    <input type="text" placeholder="Цена от">
+                </div>
+                <div class="col">
+                    <input type="text" placeholder="до">
+                </div>
+                <div class="col select-container">
                     <select id="my-select" name="">
-                        <option>Детали</option>
+                        <option>Черноречье</option>
                     </select>
                 </div>
                 <div class="col">
@@ -224,14 +227,17 @@
 <section id="products">
     <div class="container product-list-controls__block mb-4">
         <div class="row">
-            <div class="col">
+            <div class="w-200px mr-3 select-container">
                 <select>
                     <option value="0">По возрастанию цены</option>
                     <option value="1">По убыванию цены</option>
                     <option value="3">Сначала более новые</option>
                 </select>
+            </div>
+            <div class="w-150px">
                 <button>На карте</button>
             </div>
+
         </div>
         
     </div>

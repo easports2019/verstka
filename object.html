@@ -96,184 +96,79 @@
     </div>
 </section>
 
-<section id="filters">
-    <div class="container filters__block">
-        <div class="row">
-            <div class="col filters__service-list">
-                <span class="filters__service-list-item active">
-                    <a href="#">Купить</a>
-                </span>
-                <span class="filters__service-list-item">
-                    <a href="#">Снять</a>
-                </span>
-                <span class="filters__service-list-item">
-                    <a href="#">Продать</a>
-                </span>
-                <span class="filters__service-list-item">
-                    <a href="#">Сдать</a>
-                </span>
+<section id="product-card">
+    
+    <div class="container product-card__block">
+        <div class="row mt-4">
+            <div class="col">
+                <h1 class="product-card__title">1 комнатная квартира в районе Ожогина / Патрушева, ул. Федюнинского, 56, ЖК «Ново-Патрушево», г. Тюмень</h1>
             </div>
         </div>
-        <form method="post" onsubmit="">
-            
-            <div class="row filters__field-list">
-                <div class="col-2">
-                    <select id="my-select" name="">
-                        <option>Квартира</option>
-                    </select>
-                </div>
-                <div class="col-1">
-                    <input type="text" placeholder="Цена от">
-                </div>
-                <div class="col-1">
-                    <input type="text" placeholder="до">
-                </div>
-                <div class="col-2">
-                    <select id="my-select" name="">
-                        <option>Где</option>
-                    </select>
-                </div>
-                <div class="col-2">
-                    <select id="my-select" name="">
-                        <option>Детали</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <button type="submit">Показать</button>
-                </div>
-                <div class="col">
-                    <span>
-                        Найдено 155
-                    </span>
-                </div>
-                <div class="col">
-                    <a href="#">Сбросить фильтр</a>
-                </div>
-            </div>
-        </form>
-
-    </div>
-</section>
-
-<section id="best-suggestions">
-    <div class="container">
-        <div class="row my-4">
+        <div class="row mb-4">
             <div class="col">
-                <h2 class="title">Лучшие предложения ARBUZ</h2>
+                <h5 class="product-card__under-title">г. Тюмень, район Ожогина / Патрушева</h5>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="card card_realty">
-                    <img class="card-img-top" src="./assets/img/object.png" alt="">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <h5 class="card-title">2 700 000 ₽</h5>
 
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">72 м<sup>2</sup></h5>
-
-                            </div>
-
-                        </div>
-                        <p class="card-text">2 комн.квартира  42.00 м<sup>2</sup>, 5/5 этаж, ул.Димитрова, д 33/7</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card_realty">
-                    <img class="card-img-top" src="./assets/img/object.png" alt="">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <h5 class="card-title">3 750 000 ₽</h5>
-
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">102 м<sup>2</sup></h5>
-
-                            </div>
-
-                        </div>
-                        <p class="card-text">2 комн.квартира  42.00 м<sup>2</sup>, 5/5 этаж, ул.Димитрова, д 33/7</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card_realty">
-                    <img class="card-img-top" src="./assets/img/object.png" alt="">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <h5 class="card-title">2 550 000 ₽</h5>
-
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">62 м<sup>2</sup></h5>
-
-                            </div>
-
-                        </div>
-                        <p class="card-text">2 комн.квартира  42.00 м<sup>2</sup>, 5/5 этаж, ул.Димитрова, д 33/7</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="products">
-    <div class="container product-list-controls__block mb-4">
-        <div class="row">
-            <div class="col">
-                <select>
-                    <option value="0">По возрастанию цены</option>
-                    <option value="1">По убыванию цены</option>
-                    <option value="3">Сначала более новые</option>
-                </select>
-                <button>На карте</button>
-            </div>
-        </div>
-        
-    </div>
-    <div class="container product-list__block">
         <div class="row product-list-item">
-            <div class="col-3">
-                <img class="img-fluid" src="./assets/img/object-square.png" alt="">
-                <div class="product-list-item__under-img">
-                    <a href="#">+12 фото +0 план</a>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col">
+                        <img class="img-fluid" src="./assets/img/object-square.png" alt="">
+                        <div class="product-list-item__under-img">
+                            <a href="#">+12 фото +0 план</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-7">
-                <h3>2 комнатная, 62 м, 7 этаж из 16</h3>
-                <p class="w-50">Район Ожогина / Патрушева, ул. Федюнинского, 55г. Тюмень, ЖК «Ново-Патрушево»</p>
-                <div>
-                    <table class="table small-table w-50">
-                        <tbody>
-                          <tr>
-                            <td>Материал</td>
-                            <td>Панель</td>
-                          </tr>
-                          <tr>
-                            <td>Ремонт</td>
-                            <td>Дизайн-проект</td>
-                          </tr>
-                          <tr>
-                            <td>Год постройки</td>
-                            <td>2019</td>
-                          </tr>
-                        </tbody>
-                    </table>
+                <div class="row mt-4">
+                    <div class="col">
+                        <p>Классическая квартира формата 1+. Просторная кухня-гостиная с выходом на лоджию, уютная спальня. Большая застекленная лоджия на два окна, квартира светлая, уютная и очень теплая.
+        
+                            Район с отличной социальной инфраструктурой - рядом школа и детский сад, много магазинов, аптек, хорошая транспортная развязка.
+                            
+                            Без обременений.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+
+                        <table class="table small-table w-50">
+                            <tbody>
+                              <tr>
+                                <td>Материал</td>
+                                <td>Панель</td>
+                              </tr>
+                              <tr>
+                                <td>Ремонт</td>
+                                <td>Дизайн-проект</td>
+                              </tr>
+                              <tr>
+                                <td>Год постройки</td>
+                                <td>2019</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
                 <p class="text-secondary">
                     Продаётся замечательная квартира в самом динамично развивающемся районе города. 
                 </p>
                 <button>Показать телефон</button>
+                
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <div class="row">
+                    <div class="col product-list-item__agent">
+
+                        <img class="img-fluid" src="./assets/img/agent-small.png" alt="agent">
+                    </div>
+                    <div class="row">
+                        <div class="col">фото миниатюры</div>
+                    </div>
+                    
+                </div>
+                <div class="row mt-4">
                     <div class="col">
                       <h3 class="product-list-item__price">5 900 000 ₽</h3>
                     </div>
@@ -283,118 +178,36 @@
                       <p class="product-list-item__price-area">110500 ₽ за м<sup>2</sup></p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row product-list-item">
-            <div class="col-3">
-                <img class="img-fluid" src="./assets/img/object-square.png" alt="">
-                <div class="product-list-item__under-img">
-                    <a href="#">+1 фото +1 план</a>
-                </div>
-            </div>
-            <div class="col-7">
-                <h3>1 комнатная, 42 м, 14 этаж из 16</h3>
-                <p class="w-50">Центральный район, ул. Советская, 51а. Кострома</p>
-                <div>
-                    <table class="table small-table w-50">
-                        <tbody>
-                          <tr>
-                            <td>Материал</td>
-                            <td>Панель</td>
-                          </tr>
-                          <tr>
-                            <td>Ремонт</td>
-                            <td>Дизайн-проект</td>
-                          </tr>
-                          <tr>
-                            <td>Год постройки</td>
-                            <td>2019</td>
-                          </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-secondary">
-                    Продаётся замечательная квартира в самом динамично развивающемся районе города. В квартире сделан качественный ремонт по дизайн проекту, все материалы высочайшего качества.Очень уд...
-                    Продаётся замечательная квартира в самом динамично развивающемся районе города. В квартире сделан качественный ремонт по дизайн проекту, все материалы высочайшего качества.Очень уд...
-                </p>
-                <button>Показать телефон</button>
-            </div>
-            <div class="col-2">
-                <div class="row">
+                <h4 class="mt-4">Виталий</h4>
+                <p>Специалист по объекту</p>
+
+                <div class="row my-3">
                     <div class="col">
-                      <h3 class="product-list-item__price">2 200 000 ₽</h3>
+                        <button class="w-100">Показать телефон</button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row my-3">
                     <div class="col">
-                      <p class="product-list-item__price-area">60500 ₽ за м<sup>2</sup></p>
+                        <button class="w-100">Обратный звонок</button>
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <button class="w-100">Написать в WhatsApp</button>
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <button class="w-100">Забронировать</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row product-list-item">
-            <div class="col-3">
-                <img class="img-fluid" src="./assets/img/object-square.png" alt="">
-                <div class="product-list-item__under-img">
-                    <a href="#">+31 фото +1 план</a>
-                </div>
-            </div>
-            <div class="col-7">
-                <h3>1 комнатная, 42 м, 14 этаж из 16</h3>
-                <p class="w-50">Район Ожогина / Патрушева, ул. Федюнинского, 56г. Тюмень, ЖК «Ново-Патрушево»</p>
-                <div>
-                    <table class="table small-table w-50">
-                        <tbody>
-                          <tr>
-                            <td>Материал</td>
-                            <td>Панель</td>
-                          </tr>
-                          <tr>
-                            <td>Ремонт</td>
-                            <td>Дизайн-проект</td>
-                          </tr>
-                          <tr>
-                            <td>Год постройки</td>
-                            <td>2019</td>
-                          </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-secondary">
-                    Продаётся замечательная квартира в самом динамично развивающемся районе города. В квартире сделан качественный ремонт по дизайн проекту, все материалы высочайшего качества.Очень уд...
-                </p>
-                <button>Показать телефон</button>
-            </div>
-            <div class="col-2">
-                <div class="row">
-                    <div class="col">
-                      <h3 class="product-list-item__price">3 900 000 ₽</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                      <p class="product-list-item__price-area">100500 ₽ за м<sup>2</sup></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        
         
     </div>
-    <div class="container pagination__block">
-        <div class="row">
-            <div class="offset-3 col-6">
-                <ul class="pagination product-pagination justify-content-center">
-                    <li class="active"><a href="#" class="page-link">1</a></li>
-                    <li ><a href="#" class="page-link">2</a></li>
-                    <li ><a href="#" class="page-link">3</a></li>
-                    <li ><a href="#" class="page-link">4</a></li>
-                    <li ><a href="#" class="page-link">...</a></li>
-                    <li ><a href="#" class="page-link">20</a></li>
-                    <li ><a href="#" class="page-link">Вперёд</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+   
 </section>
 
 
