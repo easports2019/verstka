@@ -6,7 +6,11 @@
     <meta name="keywords" content="@page.Keywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    
+
+
 
 </head>
 <body>
@@ -110,17 +114,98 @@
             </div>
         </div>
 
-        <div class="row product-list-item">
-            <div class="col-9">
+        <div class="row product-card">
+            <div class="col-9 product-card__main-block">
                 <div class="row">
                     <div class="col">
-                        <img class="img-fluid" src="./assets/img/object-square.png" alt="">
-                        <div class="product-list-item__under-img">
-                            <a href="#">+12 фото +0 план</a>
+                        <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
+                            <div
+                              class="carousel__slide"
+                              data-src="./assets/img/img-object.png"
+                              data-fancybox="gallery"
+                              data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+                            >
+                              <img class="img-fluid" src="./assets/img/img-object.png" />
+                            </div>
+                            <div
+                              class="carousel__slide"
+                              data-src="./assets/img/img-object.png"
+                              data-fancybox="gallery"
+                              data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+                            >
+                                <img class="img-fluid" src="./assets/img/img-object.png" />
+                            </div>
+                            <div
+                              class="carousel__slide"
+                              data-src="./assets/img/img-object.png"
+                              data-fancybox="gallery"
+                              data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+                            >
+                                <img class="img-fluid" src="./assets/img/img-object.png" />
+                            </div>
+                            <div
+                              class="carousel__slide"
+                              data-src="./assets/img/img-object.png"
+                              data-fancybox="gallery"
+                              data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+                            >
+                                <img src="./assets/img/img-object.png" />
+                            </div>
+                            <div
+                              class="carousel__slide"
+                              data-src="./assets/img/img-object.png"
+                              data-fancybox="gallery"
+                              data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+                            >
+                                <img src="./assets/img/img-object.png" />
+                            </div>
+                            <div
+                              class="carousel__slide"
+                              data-src="./assets/img/img-object.png"
+                              data-fancybox="gallery"
+                              data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+                            >
+                                <img src="./assets/img/img-object.png" />
+                            </div>
+                            <div
+                              class="carousel__slide"
+                              data-src="./assets/img/img-object.png"
+                              data-fancybox="gallery"
+                              data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit."
+                            >
+                                <img src="./assets/img/img-object.png" />
+                            </div>
+                          </div>
+                        <div class="product-card__under-img">
+                            <a href="#">На карте</a>
+                            <a href="#">Видео</a>
                         </div>
+                        <div id="thumbCarousel" class="carousel max-w-xl mx-auto">
+                            <div class="carousel__slide">
+                              <img class="panzoom__content" src="./assets/img/img-object.png" />
+                            </div>
+                            <div class="carousel__slide">
+                              <img class="panzoom__content" src="./assets/img/img-object.png" />
+                            </div>
+                            <div class="carousel__slide">
+                              <img class="panzoom__content" src="./assets/img/img-object.png" />
+                            </div>
+                            <div class="carousel__slide">
+                              <img class="panzoom__content" src="./assets/img/img-object.png" />
+                            </div>
+                            <div class="carousel__slide">
+                              <img class="panzoom__content" src="./assets/img/img-object.png" />
+                            </div>
+                            <div class="carousel__slide">
+                              <img class="panzoom__content" src="./assets/img/img-object.png" />
+                            </div>
+                            <div class="carousel__slide">
+                              <img class="panzoom__content" src="./assets/img/img-object.png" />
+                            </div>
+                          </div>
                     </div>
                 </div>
-                <div class="row mt-4">
+                <div class="row mt-5">
                     <div class="col">
                         <p>Классическая квартира формата 1+. Просторная кухня-гостиная с выходом на лоджию, уютная спальня. Большая застекленная лоджия на два окна, квартира светлая, уютная и очень теплая.
         
@@ -151,31 +236,39 @@
                     </div>
 
                 </div>
-                <p class="text-secondary">
-                    Продаётся замечательная квартира в самом динамично развивающемся районе города. 
-                </p>
-                <button>Показать телефон</button>
+
+                <div class="row">
+                    <div class="col">
+                        <h4 class="mt-4 mb-3">Подробности</h4>
+                        <p>Квартира в районе 2 микрорайон, ул. 30 лет победы, 104
+                            г. Тюмень</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h4 class="mt-4 mb-3">На карте</h4>
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A11783dc0a88265664c56967a0e1dcfb9e5fe7930d208e0dcc16e13ce769d7c60&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                </div>
+
                 
             </div>
-            <div class="col-3">
+            <div class="col-3 product-card__secondary-block">
                 <div class="row">
                     <div class="col product-list-item__agent">
 
                         <img class="img-fluid" src="./assets/img/agent-small.png" alt="agent">
                     </div>
-                    <div class="row">
-                        <div class="col">фото миниатюры</div>
-                    </div>
-                    
                 </div>
                 <div class="row mt-4">
                     <div class="col">
-                      <h3 class="product-list-item__price">5 900 000 ₽</h3>
+                      <h2 class="product-card__price">5 900 000 ₽</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                      <p class="product-list-item__price-area">110500 ₽ за м<sup>2</sup></p>
+                      <p class="product-card__price-area">110 500 ₽ за м<sup>2</sup></p>
                     </div>
                 </div>
                 <h4 class="mt-4">Виталий</h4>
@@ -291,9 +384,10 @@
             </div>
         </section>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
