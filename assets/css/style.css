@@ -53,10 +53,12 @@
 /*#region variables */
 :root{
     --primary-color: #E63637;
+    --primary-darked-color: #B60607;
     --secondary-color: #44944f;
     --text-color: #000;
     --link-hover-color: #000;
     --main-text-color: #fff;
+    --main-text-darked-color: #eee;
     --main-border: #dedede;
     --button-background: #f3f3f3;
     --secondary-text-color: #ababab;
@@ -296,8 +298,16 @@ select {
     color: var(--main-text-color);
     background-color: var(--primary-color);
     height: 50px;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
     font-family: 'Roboto Bold';
+    padding-left: 30px;
+    padding-right: 20px;
+    border-radius: 0;
+}
+
+.btn-widget:hover{
+    background-color: var(--primary-darked-color);
+    color: var(--main-text-darked-color);
 }
 
 .margin_mt27px{
@@ -790,7 +800,7 @@ select {
     z-index: 0;
     color: var(--text-color);
     text-align: left;
-    font-family: 'Roboto Medium';
+    font-family: 'Roboto';
     margin-top: 0.7em;
     font-size: 1.1em;
 }
@@ -822,6 +832,63 @@ select {
 /*#endregion ----  agents list ---- */
 
 /* ---- CATALOGUE PAGE end ---- */
+
+
+/* ---- WORK PAGE begin ---- */
+/*#region ----  advantages ---- */
+
+.work-advantages-list div img{
+    width: 40px;
+}
+
+.work-advantages-list h6{
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.work-advantages-list p{
+    color: var(--text-color);
+    font-family: 'Roboto';
+    margin-top: 0.7em;
+    font-size: 1.4em;
+}
+/*#endregion ----  advantages ---- */
+
+/*#region ----  gallery ---- */
+
+.work-gallery-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-gallery-item{
+    margin:2%;
+    width: 20%;
+}
+
+.work-gallery-item img{
+    width: 100%;
+    height: 100%;
+}
+/*#endregion ----  gallery ---- */
+
+/*#region ----  bid ---- */
+
+#work-bid{
+    background: var(--secondary-color);
+    color: var(--main-text-color);
+}
+
+/*#endregion ----  bid ---- */
+
+
+/*#region  */
+/*#endregion */
+
+
+/* ---- WORK PAGE end ---- */
 
 
 /*#region ---- footer ---- */
