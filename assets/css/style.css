@@ -96,7 +96,7 @@ p{
 
 select,
 option,
-input,
+input[type="text"],
 button
 {
     font-size: 0.8em;
@@ -301,11 +301,27 @@ select {
     box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
     font-family: 'Roboto Bold';
     padding-left: 30px;
-    padding-right: 20px;
+    padding-right: 30px;
     border-radius: 0;
 }
 
 .btn-widget:hover{
+    background-color: var(--primary-darked-color);
+    color: var(--main-text-darked-color);
+}
+
+.btn-standart{
+    color: var(--main-text-color);
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.3);
+    font-family: 'Roboto Bold';
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 0.9em;
+    border-radius: 0;
+}
+
+.btn-standart:hover{
     background-color: var(--primary-darked-color);
     color: var(--main-text-darked-color);
 }
@@ -877,7 +893,6 @@ select {
 /*#region ----  bid ---- */
 
 #work-bid{
-    background: var(--secondary-color);
     color: var(--main-text-color);
 }
 
