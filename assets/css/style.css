@@ -165,6 +165,10 @@ select {
     background: var(--primary-color);
 }
 
+.bg-green-red{
+    background: linear-gradient(to right, var(--secondary-color) 50%, var(--primary-color) 50%);
+}
+
 
 .bg-black-23t{
     background-color: black;
