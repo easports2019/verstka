@@ -951,9 +951,20 @@ select {
 
 /* ---- WORK PAGE end ---- */
 
+/* ----- FORMS ----- */
+/*#region  */
+
+.form-title{
+    font-size: 1.4em;
+    font-family: "Roboto Medium";
+    
+    color: var(--primary-color)
+}
+
+/*endregion */
 
 /*#region ---- footer ---- */
-
+/* ----- FORMS end ----- */
 
 .bottommenu__row__city{
     height: 56px;
