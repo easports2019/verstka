@@ -46,3 +46,105 @@
     -->
   </body>
 </html>
+
+
+
+<header>
+  <section id="header">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-4 bg-green">
+                  Кострома
+              </div>
+              <div class="col-8 bg-red">
+                  <div class="row">
+                      <div class="col-3">@master.SiteTel</div>
+                      <div class="col-3">@master.SiteEmail</div>
+                      <div class="col-6">
+                          <ul>
+                              @foreach (var social in master.SiteSocialNetworks)
+                              {
+                                  <li>
+                                      <img src="@social.Image?width=40" />
+                                      @Html.Raw(social.Html)
+                                  </li>
+                              }
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="mainmenu">
+      <a href="~/">
+          <img src="@master.Logo?width=220" alt="@master.SiteName" />
+      </a>
+      @if (master.Menus.ContainsKey("topMenu"))
+      {
+          <ul>
+              @foreach (var mi in master.Menus["topMenu"].MenuItems)
+              {
+                  <li><a href="@mi.Link">@mi.Title</a></li>
+              }
+          </ul>
+
+      }
+      else
+      {
+          <span>Главное меню не найдено</span>
+      }
+  </section>
+</header>
+
+
+<footer>
+  <section id="footer">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-4 bg-green">
+                  @if (master.Menus.ContainsKey("footerMenu"))
+                  {
+                      <ul>
+                          @foreach (var mi in master.Menus["footerMenu"].MenuItems)
+                          {
+                              <li><a href="@mi.Link">@mi.Title</a></li>
+                          }
+                      </ul>
+
+                  }
+                  else
+                  {
+                      <span>Меню подвала не найдено</span>
+
+                  }
+              </div>
+              <div class="col-6 bg-red">
+                  <div class="row">
+                      <div class="col-7">
+                          Мы в соцсетях
+                          <ul>
+                              @foreach (var social in master.SiteSocialNetworks)
+                              {
+                                  <li>
+                                      <img src="@social.Image?width=40" />
+                                      @Html.Raw(social.Html)
+                                  </li>
+                              }
+                          </ul>
+                          <p>2009-2022, @master.SiteName</p>
+                          <p>@master.SiteFooterText</p>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="col-2 bg-red">
+                  <p>Разработано Тимофеев дизайн студио</p>
+                  <p>Программирование: Александр Смирнов</p>
+              </div>
+
+          </div>
+      </div>
+
+  </section>
+</footer>

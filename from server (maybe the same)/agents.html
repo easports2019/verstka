@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>@page.Title - @master.SiteName</title>
+    <meta name="description" content="@page.Description" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="@page.Keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+</head>
+<body>
+    <header>
+        <section id="topmenu-block" class="py-0">
+            <div class="container-fluid topmenu__container bg-green-red">
+                <div class="container ">
+
+                    <div class="row topmenu__row__city">
+                        <div class="col-3 bg-green d-flex justify-content-end align-items-center">
+                            Кострома
+                        </div>
+                        <div class="col-9 bg-red">
+                            <div class="row topmenu__row__contacts">
+                                <div class="col-3 d-flex align-items-center">общий телефон</div>
+                                <div class="col-3 d-flex align-items-center">общий email</div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <nav class="nav nav-fill">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <img src="vk.jpg" />
+                                                Html названия
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <img src="vk.jpg" />
+                                                Html названия
+                                            </a>
+                                        </li>
+                                    </nav>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section id="mainmenu-block" class="py-0">
+            <div class="mainmenu__container container">
+                <div class="row align-items-center mainmenu-logo__row">
+                    <div class="offset-1 logo__col col-2 d-flex justify-content-end">
+                        <a class="nav-link" href="~/">
+                            <img src="/assets/img/logo.png?width=220" alt="@master.SiteName" />
+                        </a>    
+                    </div>
+                    <div class="col-8 mainmenu__col d-flex justify-content-center">
+                        <nav class="nav mainmenu justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./catalogue.html">Недвижимость</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./agents.html" aria-disabled="true">Агенты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./work.html" aria-disabled="true">Работа в Arbuz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./yurist.html" aria-disabled="true">Юридические услуги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./ipoteka.html" aria-disabled="true">Ипотека</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./reports.html" aria-disabled="true">Отзывы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacts.html" aria-disabled="true">Контакты</a>
+                            </li>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    
+    <section id="beadcrumbs">
+        <div class="container beadcrumbs__block">
+            <div class="row">
+                <div class="col beadcrumbs__list">
+                    <span class="beadcrumbs__list-item"><a href="#">Главная страница</a> > </span>
+                    <span class="beadcrumbs__list-item">
+                        Специалисты
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- @RenderBody() -->
+
+    <section id="agents-block">
+        <div class="container agents-container">
+            <div class="row">
+                <div class="col">
+                    <div class="row my-4">
+                        <div class="col">
+                            <h1 class="agents-container__title">Специалисты ARBUZ</h1>
+                        </div>
+                    </div>
+                    <div class="row agents-list">
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                        <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3">
+                            <div class="agents-list-item">
+                                <img src="/assets/img/elena.png" alt="">
+                                <div class="button" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <span>Э Позвонить</span>
+                                </div>
+                                <div class="details" onmousemove="showDetails(this, true);" onmouseleave="showDetails(this, false);">
+                                    <h6 class="agents-list-item__details_name">Екатерина Кораблева</h6>
+                                    <p class="agents-list-item__details_tel">+7 961-127-41-04</p>
+                                    <p class="agents-list-item__details_action">Написать на почту</p>
+                                    <p class="agents-list-item__details_email">kara.e@arbuz.ru</p>
+                                </div>
+                            </div>
+                            <p class="agents-list-item_name">Екатерина Кораблева</p>
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col d-flex justify-content-end">
+                            <a href="/agents/best" class="main-agents-container___link">
+                                Лучшие агенты <span>&#9658;</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <section id="bottommenu-block" class="py-0">
+            <div class="container topmenu__container">
+                <div class="row bottommenu__row__city">
+                    <div class="offset-1 col-2 logo__col d-flex justify-content-end align-items-center">
+                        <a class="nav-link" href="~/">
+                            <img src="/assets/img/logo.png?width=220" alt="@master.SiteName" />
+                        </a>    
+                    </div>
+                    <div class="col-9">
+                        <div class="row bottommenu__row__contacts">
+                            <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3 d-flex align-items-center">общий телефон</div>
+                            <div class="col-sm-12 col-xl-3 col-md-4 col-lg-3 d-flex align-items-center">общий email</div>
+                            <div class="col d-flex align-items-center">
+                                Кострома    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="container-fluid footer__container bg-green-red">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 bg-green d-flex justify-content-end align-items-start py-5 pr-5 footer__leftblock">
+                            <div class="row">
+                                <div class="col">
+                                    <nav class="nav flex-column text-right footer__leftmenu">
+                                        <li class="nav-item"><a class="nav-link" href="#">Недвижимость</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Агенты</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Отзывы</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Сертификаты</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Ипотека</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 bg-red d-flex justify-content-start align-items-start py-5 pl-5 footer__centerblock">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="footer__centerblock__title">Мы в соцсетях</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <nav class="nav footer__centerblock__menu">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">vk</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">telegram</a>
+                                            </li>
+                                        </nav>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col">
+                                            <span class="footer__centerblock__copyright">@2009-2022, ООО "Arbuz"</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="footer__centerblock__text"> Отправляя форму заявки, вы даете согласие на обработку и использование своих персональных данных в соответствии с №152-ФЗ «О персональных данных»
+    и Политикой ОПД ООО «Арбуз». Информация размещенная на сайте не является публичной офертой. Стоимость объектов, от наших партнеров указанас учетом всех скидок
+    и спец.предложений. За более подробной информацией обращайтесь к специалистам отдела продаж АН «Арбуз».</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 bg-red d-flex justify-content-start align-items-start py-5 pl-5 footer__rightblock">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script>
+
+        function showDetails(e, show){
+            let det = {};
+            let name = {};
+            if (e.className == "button")
+                det = e?.parentElement?.getElementsByClassName("details")[0];
+            else if (e.className == "details")
+                det = e;
+
+            name = det?.parentElement?.parentElement?.getElementsByClassName("agents-list-item_name")[0];
+            name.style.display = show ? 'none' : 'block';
+            det.style.display = show ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

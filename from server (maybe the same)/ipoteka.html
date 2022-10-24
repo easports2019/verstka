@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>@page.Title - @master.SiteName</title>
+    <meta name="description" content="@page.Description" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="@page.Keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+</head>
+<body>
+    <header>
+        <section id="topmenu-block" class="py-0">
+            <div class="container-fluid topmenu__container bg-green-red">
+                <div class="container ">
+
+                    <div class="row topmenu__row__city">
+                        <div class="col-3 bg-green d-flex justify-content-end align-items-center">
+                            Кострома
+                        </div>
+                        <div class="col-9 bg-red">
+                            <div class="row topmenu__row__contacts">
+                                <div class="col-3 d-flex align-items-center">общий телефон</div>
+                                <div class="col-3 d-flex align-items-center">общий email</div>
+                                <div class="col-6 d-flex align-items-center">
+                                    <nav class="nav nav-fill">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <img src="vk.jpg" />
+                                                Html названия
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <img src="vk.jpg" />
+                                                Html названия
+                                            </a>
+                                        </li>
+                                    </nav>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section id="mainmenu-block" class="py-0">
+            <div class="mainmenu__container container">
+                <div class="row align-items-center mainmenu-logo__row">
+                    <div class="offset-1 logo__col col-2 d-flex justify-content-end">
+                        <a class="nav-link" href="~/">
+                            <img src="/assets/img/logo.png?width=220" alt="@master.SiteName" />
+                        </a>    
+                    </div>
+                    <div class="col-8 mainmenu__col d-flex justify-content-center">
+                        <nav class="nav mainmenu justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./catalogue.html">Недвижимость</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./agents.html" aria-disabled="true">Агенты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./work.html" aria-disabled="true">Работа в Arbuz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./yurist.html" aria-disabled="true">Юридические услуги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./ipoteka.html" aria-disabled="true">Ипотека</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./reports.html" aria-disabled="true">Отзывы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacts.html" aria-disabled="true">Контакты</a>
+                            </li>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section id="work-top-banner-block" class="py-0">
+        <div class="container-fluid no-gutters p-0 image-background" style="background: url('/assets/img/ipoteka_top.png'); height: 450px">
+            <div class="container beadcrumbs__block pt-3">
+                <div class="row">
+                    <div class="col beadcrumbs__list">
+                        <span class="beadcrumbs__list-item"><a href="#">Главная страница</a> > </span>
+                        <span class="beadcrumbs__list-item">
+                            Ипотека
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col">
+
+                        <!-- <img class="img-fluid w-100" src="" alt=""> -->
+                        <h2 class="page-title2 font-size-2-5">Ипотека от ARBUZ</h2>
+                        <p class="page-title3">ARBUZ - надежный партнер</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+    
+
+
+    <!-- @RenderBody() -->
+    <section id="work-widget-block" class="py-0">
+            <!-- Modal -->
+            <div class="modal fade" id="bidModal1" tabindex="-1" aria-labelledby="bidModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="bidModal1Label">Оформить ипотеку</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Отправить</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <button type="button" class="btn btn-widget margin_mt27px" data-bs-toggle="modal" data-bs-target="#bidModal1">Оформить ипотеку</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <section id="work-advantages-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Выгодно! Комфортно! Безопасно!</h2>
+                </div>
+            </div>
+            <div class="row work-advantages-list mt-3 mb-4">
+                <div class="col-8">
+                    <div class="row">
+
+                        <div class="col-6">
+                            <figure class="figure">
+                                <img class="figure-img img-fluid my-4" src="/assets/img/yur_icon_1.png" alt="">
+                                <figcaption class="figure-caption">
+                                    <p>Гражданско-правовая практика</p>
+                                    <p>Ведем дела по защите интересов физических и юридических лиц во всех инстанциях судов общей юрисдикции, а также представляем интересы клиентов в кассационной коллегии по гражданским делам Верховного суда РФ</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6">
+                            <figure class="figure">
+                                <img class="figure-img img-fluid my-4" src="/assets/img/yur_icon_2.png" alt="">
+                                <figcaption class="figure-caption">
+                                    <p>Представительство в суде</p>
+                                    <p>Оказываем услуги профессионального представительства юридических и физических лиц в судах общей юрисдикции РФ, а также услуги представительства юридических лиц и индивидуальных предпринимателей в Арбитражных судах РФ</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6">
+                            <figure class="figure">
+                                <img class="figure-img img-fluid my-4" src="/assets/img/yur_icon_3.png" alt="">
+                                <figcaption class="figure-caption">
+                                    <p>Подготовка процессуальных документов</p>
+                                    <p>Подготовим документы с четкими формулировкам, отражающими суть, а также соответствующие установленным в законе гражданско-процессуальным нормам</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6">
+                            <figure class="figure">
+                                <img class="figure-img img-fluid my-4" src="/assets/img/yur_icon_4.png" alt="">
+                                <figcaption class="figure-caption">
+                                    <p>Сделки с недвижимостью</p>
+                                    <p>Подготовка рекомендаций по минимизации рисков, оспаривание кадастровой стоимости, защита интересов участников долевого строительства. Оформление прав: новые объекты, переход прав на недвижимость по сделке, земельные участки, обременения недвижимого имущества и так далее</p>
+                                </figcaption>
+                            </figure>
+                        </div>  
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="shadow p-4 mb-4 rounded">
+
+                        <div class="row my-3">
+                            <div class="col">
+                                <h5 class="form-title">Ипотечный калькулятор</h5>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="form__InputPrice">Цена недвижимости, руб</label>
+                                        <input type="number" class="form-control" id="form__InputPrice" placeholder="3 900 000 Р" aria-describedby="inputPrice">
+                                        <!-- <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим Вашу электронную почту.</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form__InputPrice">Процентная ставка, % в год</label>
+                                        <input type="number" class="form-control" id="form__InputPrice" placeholder="10" aria-describedby="inputPrice">
+                                        <!-- <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим Вашу электронную почту.</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form__InputPrice">Период в годах, г</label>
+                                        <input type="number" class="form-control" id="form__InputPrice" placeholder="15" aria-describedby="inputPrice">
+                                        <!-- <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим Вашу электронную почту.</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form__InputPrice">Первоначальный взнос, руб</label>
+                                        <input type="number" class="form-control" id="form__InputPrice" placeholder="350 000" aria-describedby="inputPrice">
+                                        <!-- <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим Вашу электронную почту.</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-standart">Рассчитать</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div>Сумма кредита</div>
+                                    </div>
+                                    <div class="col">
+                                        <div>3 900 000Р</div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col">
+                                        <div>Ежемесячный платеж</div>
+                                    </div>
+                                    <div class="col">
+                                        <div>25 000Р</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                              
+            </div>
+        </div>
+    </section>
+
+    <section id="work-bid">
+        <div class="container text-center bg-green py-5">
+            <div class="row">
+                <div class="col">
+                    <h3>Хотите получить бесплатную консультацию?</h3>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <p>Заполните форму и мы перезвоним вам!</p>
+                </div>
+            </div>
+            <div class="row mt-3 mb-5">
+                <div class="col-2"></div>
+                <div class="col-3">
+                    <input type="text" class="w-100" placeholder="Имя" />
+                </div>
+                <div class="col-3">
+                    <input type="text" class="w-100" placeholder="Номер вашего телефона" />
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-standart w-100">Отправить</button>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" checked />
+                    <span>Я согласен с условиями обработки персональных данных</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <section id="bottommenu-block" class="py-0">
+            <div class="container topmenu__container">
+                <div class="row bottommenu__row__city">
+                    <div class="offset-1 col-2 logo__col d-flex justify-content-end align-items-center">
+                        <a class="nav-link" href="~/">
+                            <img src="/assets/img/logo.png?width=220" alt="@master.SiteName" />
+                        </a>    
+                    </div>
+                    <div class="col-9">
+                        <div class="row bottommenu__row__contacts">
+                            <div class="col-3 d-flex align-items-center">общий телефон</div>
+                            <div class="col-3 d-flex align-items-center">общий email</div>
+                            <div class="col d-flex align-items-center">
+                                Кострома    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="container-fluid footer__container bg-green-red">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 bg-green d-flex justify-content-end align-items-start py-5 pr-5 footer__leftblock">
+                            <div class="row">
+                                <div class="col">
+                                    <nav class="nav flex-column text-right footer__leftmenu">
+                                        <li class="nav-item"><a class="nav-link" href="#">Недвижимость</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Агенты</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Отзывы</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Сертификаты</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Ипотека</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 bg-red d-flex justify-content-start align-items-start py-5 pl-5 footer__centerblock">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="footer__centerblock__title">Мы в соцсетях</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <nav class="nav footer__centerblock__menu">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">vk</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">telegram</a>
+                                            </li>
+                                        </nav>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col">
+                                            <span class="footer__centerblock__copyright">@2009-2022, ООО "Arbuz"</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <span class="footer__centerblock__text"> Отправляя форму заявки, вы даете согласие на обработку и использование своих персональных данных в соответствии с №152-ФЗ «О персональных данных»
+    и Политикой ОПД ООО «Арбуз». Информация размещенная на сайте не является публичной офертой. Стоимость объектов, от наших партнеров указанас учетом всех скидок
+    и спец.предложений. За более подробной информацией обращайтесь к специалистам отдела продаж АН «Арбуз».</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 bg-red d-flex justify-content-start align-items-start py-5 pl-5 footer__rightblock">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
