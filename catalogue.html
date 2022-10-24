@@ -116,21 +116,39 @@
                 </span>
             </div>
         </div>
-        <form method="post" onsubmit="">
+        <form method="post" class="" onsubmit="">
             
             <div class="row filters__field-list">
-                <div class="col select-container">
-                    <select id="my-select" name="">
-                        <option>Квартира</option>
-                    </select>
+                <!-- <div class="col select-container border border-1 position-relative" style="cursor: pointer; " onclick="javascript: setShow('object')"> -->
+                <div class="col border border-1 position-relative" style="cursor: pointer; ">
+                    <span  onclick="javascript: setShow('object')">
+                        Выбрать <script>document.getElementById("objectTypeSet")</script>
+                    </span>
+                    <div id="objectType" class="position-absolute p-2 bg-white" style="left: 0px; top: 2.5em; z-index: 1; display: none;">
+                        <fieldset class="d-flex flex-column" id="objectTypeSet">
+                            <span><input type="radio" checked value="Квартира" name="objectTypeSet"> Квартира</span>
+                            <span><input type="radio" value="Комната" name="objectTypeSet"> Комната</span>
+                            <span><input type="radio" value="Дом" name="objectTypeSet"> Дом</span>
+                            <span><input type="radio" value="Гараж" name="objectTypeSet"> Гараж</span>
+                            <span><input type="radio" value="Земельный участок" name="objectTypeSet"> Земельный участок</span>
+                            <span><input type="radio" value="Коммерческая недвижимость" name="objectTypeSet"> Коммерческая недвижимость</span>
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="col select-container">
-                    <span>Комнат: </span>
-                    <select id="my-select" name="">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                <div class="col border border-1 position-relative" style="cursor: pointer; ">
+                    <span onclick="javascript: setShow('room')">
+                        Комнат
+                    </span>
+                    <div id="objectRooms" class="position-absolute p-2 bg-white" style="left: 0px; top: 2.5em; z-index: 1; display: none;">
+                        <fieldset class="d-flex flex-column" id="objectRoomsSet">
+                            <span><input type="radio" checked value="1" name="objectRoomsSet"> 1</span>
+                            <span><input type="radio" value="2" name="objectRoomsSet"> 2</span>
+                            <span><input type="radio" value="3" name="objectRoomsSet"> 3</span>
+                            <span><input type="radio" value="4" name="objectRoomsSet"> 4</span>
+                            <span><input type="radio" value="5" name="objectRoomsSet"> 5</span>
+                            <span><input type="radio" value="5+" name="objectRoomsSet"> 5+</span>
+                        </fieldset>
+                    </div>
                 </div>
                 <div class="col">
                     <input type="text" placeholder="Цена от">
@@ -138,10 +156,18 @@
                 <div class="col">
                     <input type="text" placeholder="до">
                 </div>
-                <div class="col select-container">
-                    <select id="my-select" name="">
-                        <option>Черноречье</option>
-                    </select>
+                <div class="col border border-1 position-relative" style="cursor: pointer; ">
+                    <span onclick="javascript: setShow('district')">
+                        Район
+                    </span>
+                    <div id="objectDistrict" class="position-absolute p-2 bg-white" style="left: 0px; top: 2.5em; z-index: 1; display: none;">
+                        <fieldset class="d-flex flex-column" id="objectDistrictSet">
+                            <span><input type="checkbox" value="Заволжский" checked name="objectDistrictSet"> Заволжский</span>
+                            <span><input type="checkbox" value="Центральный" name="objectDistrictSet"> Центральный</span>
+                            <span><input type="checkbox" value="Давыдовский" name="objectDistrictSet"> Давыдовский</span>
+                            <span><input type="checkbox" value="Ленинский" name="objectDistrictSet"> Ленинский</span>
+                        </fieldset>
+                    </div>
                 </div>
                 <div class="col">
                     <button type="submit">Показать</button>
@@ -155,7 +181,25 @@
                     <a href="#">Сбросить фильтр</a>
                 </div>
             </div>
+            
+            
+            
         </form>
+        <script type="text/javascript">
+            const setShow = (typ) => {
+                if (typ != "object") document.getElementById("objectType").style.display = 'none'
+                if (typ != "room") document.getElementById("objectRooms").style.display = 'none'
+                if (typ != "district") document.getElementById("objectDistrict").style.display = 'none'
+
+                let obj = document.getElementById("objectType");
+                switch (typ){
+                    case "room": obj = document.getElementById("objectRooms"); break;
+                    case "district": obj = document.getElementById("objectDistrict"); break;
+                }
+
+                obj.style.display = obj.style.display == 'block' ? 'none' : 'block'
+            }
+        </script>
 
     </div>
 </section>

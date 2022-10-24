@@ -526,7 +526,7 @@ select {
 .filters__field-list span,
 .filters__field-list a{
     background-color: transparent;
-    width:100%;
+    /* width:100%; */
 }
 
 .filters__field-list span,
