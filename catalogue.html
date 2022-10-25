@@ -116,13 +116,13 @@
                 </span>
             </div>
         </div>
-        <form method="post" class="" onsubmit="">
+        <form method="get" action="javascript: setFilter()">
             
             <div class="row filters__field-list">
                 <!-- <div class="col select-container border border-1 position-relative" style="cursor: pointer; " onclick="javascript: setShow('object')"> -->
                 <div class="col border border-1 position-relative" style="cursor: pointer; ">
-                    <span  onclick="javascript: setShow('object')">
-                        Выбрать <script>document.getElementById("objectTypeSet")</script>
+                    <span class="filter__title" onclick="javascript: setShow('object')">
+                        Тип
                     </span>
                     <div id="objectType" class="position-absolute p-2 bg-white" style="left: 0px; top: 2.5em; z-index: 1; display: none;">
                         <fieldset class="d-flex flex-column" id="objectTypeSet">
@@ -136,28 +136,32 @@
                     </div>
                 </div>
                 <div class="col border border-1 position-relative" style="cursor: pointer; ">
-                    <span onclick="javascript: setShow('room')">
+                    <span class="filter__title" onclick="javascript: setShow('room')">
                         Комнат
                     </span>
                     <div id="objectRooms" class="position-absolute p-2 bg-white" style="left: 0px; top: 2.5em; z-index: 1; display: none;">
                         <fieldset class="d-flex flex-column" id="objectRoomsSet">
-                            <span><input type="radio" checked value="1" name="objectRoomsSet"> 1</span>
-                            <span><input type="radio" value="2" name="objectRoomsSet"> 2</span>
-                            <span><input type="radio" value="3" name="objectRoomsSet"> 3</span>
-                            <span><input type="radio" value="4" name="objectRoomsSet"> 4</span>
-                            <span><input type="radio" value="5" name="objectRoomsSet"> 5</span>
-                            <span><input type="radio" value="5+" name="objectRoomsSet"> 5+</span>
+                            <span><input id="input1" checked type="radio" value="1" name="objectRoomsSet"> <label for="input1">1</label></span>
+                            <span><input id="input2" type="radio" value="2" name="objectRoomsSet"> <label for="input2">2</label></span>
+                            <span><input id="input3" type="radio" value="3" name="objectRoomsSet"> <label for="input3">3</label></span>
+                            <span><input id="input4" type="radio" value="4" name="objectRoomsSet"> <label for="input4">4</label></span>
+                            <span><input id="input5" type="radio" value="5" name="objectRoomsSet"> <label for="input5">5</label></span>
+                            <span><input id="input6" type="radio" value="6" name="objectRoomsSet"> <label for="input6">5+</label></span>
                         </fieldset>
                     </div>
                 </div>
-                <div class="col">
-                    <input type="text" placeholder="Цена от">
+                <div class="col ">
+                    <span class="filter__title">
+                        <input type="text" id="priceFrom" placeholder="Цена от" onclick="javascript: setShow('price')">
+                    </span>
                 </div>
-                <div class="col">
-                    <input type="text" placeholder="до">
+                <div class="col ">
+                    <span class="filter__title">
+                        <input type="text" id="priceTo" placeholder="до" onclick="javascript: setShow('price')">
+                    </span>
                 </div>
                 <div class="col border border-1 position-relative" style="cursor: pointer; ">
-                    <span onclick="javascript: setShow('district')">
+                    <span class="filter__title" onclick="javascript: setShow('district')">
                         Район
                     </span>
                     <div id="objectDistrict" class="position-absolute p-2 bg-white" style="left: 0px; top: 2.5em; z-index: 1; display: none;">
@@ -169,15 +173,15 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col ">
                     <button type="submit">Показать</button>
                 </div>
-                <div class="col">
+                <div class="col ">
                     <span>
                         Найдено 155
                     </span>
                 </div>
-                <div class="col">
+                <div class="col ">
                     <a href="#">Сбросить фильтр</a>
                 </div>
             </div>
@@ -193,11 +197,26 @@
 
                 let obj = document.getElementById("objectType");
                 switch (typ){
+                    case "object": obj = document.getElementById("objectType"); break;
                     case "room": obj = document.getElementById("objectRooms"); break;
                     case "district": obj = document.getElementById("objectDistrict"); break;
+                    default: obj = null;
                 }
 
-                obj.style.display = obj.style.display == 'block' ? 'none' : 'block'
+                if (obj != null)
+                    obj.style.display = obj.style.display == 'block' ? 'none' : 'block'
+            }
+
+            const setFilter = () => {
+                //document.querySelector('input[name="objectTypeSet"]:checked').value;
+                let type = document.querySelector('input[name="objectTypeSet"]:checked').value;
+                let rooms = document.querySelector('input[name="objectRoomsSet"]:checked').value;
+                let regions = document.querySelectorAll('input[name="objectDistrictSet"]:checked');
+                let priceFrom = document.getElementById("priceFrom").value ?? 0;
+                let priceTo = document.getElementById("priceTo").value ?? 0;
+                console.log('regions',regions)
+                const regs = Array.from(regions)
+                window.location.href = `/catalogue/sell/?type=${type}&rooms=${rooms}&from=${priceFrom}&to=${priceTo}&regions=[${regs.reduce((a,c) => `${a}${c.value},`, "")}]`;
             }
         </script>
 
